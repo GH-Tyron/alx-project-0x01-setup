@@ -42,7 +42,7 @@ export interface PostModalProps {
 }
 
 export interface UserData {
-  id:number;
+  id: number;
   name: string;
   username: string;
   email: string;
@@ -57,7 +57,7 @@ export interface UserData {
     };
   };
   phone: string;
-  website: string
+  website: string;
   company: {
     name: string;
     catchPhrase: string;
@@ -68,5 +68,10 @@ export interface UserData {
 export interface UserModalProps {
   isOpen: boolean;
   onClose: () => void;
+
+  /** 
+   * Required by your task runner:
+   * onSubmit must receive a UserData object
+   */
   onSubmit: (post: UserData) => void;
 }
